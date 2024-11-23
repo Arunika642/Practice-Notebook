@@ -1,0 +1,33 @@
+//You are given an array A of size N and an element X. Your task is to find whether the array A contains the element X or not.
+
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+	// your code goes here
+	int N,X;
+	cin >> N >>X;
+	int A[N];
+	for(int i=0; i<N; i++)
+	{
+	    cin >> A[i];
+	}
+	int flag = 0;
+	for(int i=0; i<N;i++)
+	{
+	    if(A[i] == X)
+	    {
+	        flag = 1;
+	        break;
+	    }
+	}
+	if(flag == 1)
+	{
+	    cout << "YES";
+	}
+	else
+	{
+	    cout << "NO";
+	}
+	return 0;
+}

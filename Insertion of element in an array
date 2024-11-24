@@ -12,7 +12,7 @@ void insertion(int arr[], int n, int x, int pos)
 int main()
 {
     int arr[10] = {10,20,40,50};
-    int n = sizeof(arr)/sizeof(arr[0]);
+    int n = 4;
     int x = 30; //no. to be inserted
     int pos = 2;
     insertion(arr,n,x,pos);

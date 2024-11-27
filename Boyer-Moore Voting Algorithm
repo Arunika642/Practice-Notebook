@@ -1,0 +1,44 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+class Solution {
+public:
+    vector<int> findMajority(vector<int>& arr) {
+        int n = arr.size();
+        int count = 0;
+        int el;
+        vector<int> result;
+        for(int i=0; i<n;i++)
+        {
+            if(count == 0)
+            {
+                count = 1;
+                el = arr[i];
+            }
+            else if(arr[i] == el)
+            {
+                count++;
+            }
+            else
+            {
+                count--;
+            }
+        }
+        int count1=0;
+        for(int i=0; i<n;i++)
+        {
+            if(arr[i] == el)
+            {
+                count1++;
+            }
+        }
+        if(count1>n/3)
+        {
+            result.push_back(count1);
+        }
+        return result;
+    }
+};
+
+TC = O(N)
+SC = O(1)

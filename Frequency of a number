@@ -1,0 +1,22 @@
+class Solution {
+  public:
+    // Function to count the frequency of all elements from 1 to N in the array.
+    vector<int> frequencyCount(vector<int>& arr) {
+        // code here
+        map<int,int> mpp;
+        
+        for(auto it:arr)
+        {
+            mpp[it]++;
+        }
+        vector<int> result(arr.size(),0); //Initializing all elements to zero
+        for(int i=0; i<=arr.size(); i++)
+        {
+            if(mpp.find(i)!=mpp.end())
+            {
+                result[i-1] = mpp[i];
+            }
+        }
+        return result;
+    }
+};

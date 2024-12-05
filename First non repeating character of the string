@@ -1,0 +1,23 @@
+The map doesn't preserve the order of characters in the string. So, when you loop through the map, you're not checking characters 
+in the order they appeared in the string.
+
+class Solution {
+  public:
+    // Function to find the first non-repeating character in a string.
+    char nonRepeatingChar(string &s) {
+        // Your code here
+        unordered_map<char,int> mpp;
+        for(char c:s)
+        {
+            mpp[c]++;
+        }
+        for(char c:s)
+        {
+            if(mpp[c]==1)
+            {
+                return c;
+            }
+        }
+        return '$';
+    }
+};

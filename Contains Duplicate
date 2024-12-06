@@ -40,3 +40,20 @@ public:
         return false;
     }
 };
+
+/*Set takes all distinct elements so if size of nums array>size of set then it means redundancy is there
+TC- O(nlogn) SC-O(n)*/
+
+class Solution {
+public:
+    bool containsDuplicate(vector<int>& nums) {
+        set<int> st;
+        for(int i=0;i<nums.size();i++)
+        {
+            st.insert(nums[i]);
+        }
+        if(nums.size()>st.size())
+          return true;
+    return false;
+    }
+};

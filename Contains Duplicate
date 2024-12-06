@@ -42,7 +42,7 @@ public:
 };
 
 /*Set takes all distinct elements so if size of nums array>size of set then it means redundancy is there
-TC- O(nlogn) SC-O(n)*/
+TC- O(nlogn) SC-O(n)*/  use an unordered set for O(1) TC
 
 class Solution {
 public:
